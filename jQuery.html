@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>JQuery学习</title>
+<script src="./js/jQuery1-11.js"></script>
+<script>
+// window.onload = function(){
+// 	var oDiv = document.getElementByID('div1');
+// 	oDiv.onclick = function(){
+// 		alert(this.innerHTML);
+// 	};
+// };
+$(function(){
+	// $('#divtop'.click(function(){
+	// 	//alert($(this).html());
+	// 	alert("2421");
+	// });
+	// $('div').has('p').css('background','red');
+	$('span').next('p').css('background','red');
+});
+// alert($().jquery);
+function Aaa(){
+}
+//Aaa,prototype.constructor = Aaa;
+//Aaa.prototype.constructor = Array;
+// Aaa.prototype.name = 'hello';
+// Aaa.prototype.age = '18';
+// Aaa.prototype = {
+// 	constructor : Aaa,//修正指向
+// 	name : 'hello',
+// 	age : 30
+// }
+var a1 = new Aaa();
+alert(a1.constructor);
+</script>
+</head>
+<body>
+<div id="divtop">
+	<span>abcasdsds</span>
+</div>
+<p>111</p>
+<div id="divtop">
+	<p>222222</p>
+</div>
+<span>222</span>
+<p>2222</p>
+</body>
+</html>
