@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>jQ第一课堂</title>
+<style>
+	body{
+		font-style: 16px;
+	}
+	input{
+		width: 220px;
+	}
+	label{
+		display: inline-block;
+		width: 80px;
+		text-align: right;
+	}
+	.genxi{
+		width: 20px;
+	}
+	label.genxi{
+		margin-left: -10px;
+	}
+	#btn-element{
+		width: 300px;
+		text-align: center;		
+	}
+	#btn{
+		width: 60px;
+		margin: 10px auto;
+	}
+</style>
+<script type="text/javascript" src="../js/jQuery1-11.js"></script>
+<script type="text/javascript" src="js.js"></script>
+<script>
+	// $(document).ready(function(){
+	// 	$(':submit').click(function(){
+	// 		alert('ggg');
+	// 	});
+	// 	$(':text').blur(function(){
+	// 		var value = $(this).val();
+	// 		alert(value);
+	// 	});
+	// });
+</script>
+</head>
+<body>
+<form action="">
+	<div id="uname-element">
+		<label for="uname">用&nbsp;户&nbsp;名:</label>
+		<input id="uname" type="text" name="username" />
+		<span></span>
+	</div>
+	<div id="upass-element">
+		<label for="upass">密&nbsp;&nbsp;&nbsp;&nbsp;码:</label>
+		<input id="upass" type="password" name="password">
+		<span></span>
+	</div>
+	<div id="repass-element">
+		<label for="repass">重复密码:</label>
+		<input id="repass" type="password" name="repassword">
+		<span></span>
+	</div>
+	<div>
+		<label>性别:</label>
+		<input id="male" type="radio"  class="genxi" name="gender" value="male" checked="checked">
+		<label for="male" class="genxi">男</label>
+		<input id="female" type="radio" class="genxi" name="gender" value="female">
+		<label for="female" class="genxi">女</label>
+	</div>
+	<div id="email-element">
+		<label for="email">电子邮箱:</label>
+		<input id="email" type="text" name="email">
+		<span></span>
+	</div>
+	<div id="btn-element">
+		<input id="btn" type="submit" value="注册" />
+	</div>
+</form>
+	
+</body>
+</html>

@@ -11,17 +11,17 @@
 // 		alert(this.innerHTML);
 // 	};
 // };
-$(function(){
-	// $('#divtop'.click(function(){
-	// 	//alert($(this).html());
-	// 	alert("2421");
-	// });
-	// $('div').has('p').css('background','red');
-	$('span').next('p').css('background','red');
-});
-// alert($().jquery);
-function Aaa(){
-}
+// $(function(){
+// 	// $('#divtop'.click(function(){
+// 	// 	//alert($(this).html());
+// 	// 	alert("2421");
+// 	// });
+// 	// $('div').has('p').css('background','red');
+// 	$('span').next('p').css('background','red');
+// });
+// // alert($().jquery);
+// function Aaa(){
+// }
 //Aaa,prototype.constructor = Aaa;
 //Aaa.prototype.constructor = Array;
 // Aaa.prototype.name = 'hello';
@@ -31,19 +31,51 @@ function Aaa(){
 // 	name : 'hello',
 // 	age : 30
 // }
-var a1 = new Aaa();
-alert(a1.constructor);
+
+// var a1 = new Aaa();
+// alert(a1.constructor);
+var tm = null;
+function calcSubmitCnt(){
+	var cnt = parseInt($('#submitCnt').text());
+		alert(cnt);
+		cnt = cnt+1;
+		$('#submitCnt').text(cnt);
+		$('#submitBtn').removeAttr('dis');
+		// $('#submitBtn').attr('dis','0');
+}
+$(function(){
+	$('#submitBtn').click(function(){
+		if($(this).attr('dis')=='1'){
+			return false;
+		}
+		$(this).attr('dis','1');
+		clearTimeout(tm);
+		var tm = setTimeout('calcSubmitCnt()',5000);
+		// calcSubmitCnt();
+		// alert(jici);
+	});
+});
 </script>
 </head>
 <body>
+<div id="editArea">
+	<textarea  id="textfield" ></textarea>
+	<p>
+		<a href="javascript:void(0);" id="submitBtn">提交</a>
+	</p>
+</div>
+<div id="result">
+	您已经提交了<span id="submitCnt">0</span>次
+</div>
+	
 <div id="divtop">
-	<span>abcasdsds</span>
+	<span>000000</span>
 </div>
 <p>111</p>
 <div id="divtop">
-	<p>222222</p>
+	<p>1111111</p>
 </div>
 <span>222</span>
-<p>2222</p>
+<p>33333</p>
 </body>
 </html>
